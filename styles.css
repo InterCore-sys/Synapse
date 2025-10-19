@@ -1,0 +1,91 @@
+/* ... (Existing styles for body, header, logo, etc. remain) ... */
+
+/* GITLAB COLOR ACCENT */
+:root {
+    /* ... (Existing colors) ... */
+    --gitlab-red: #FC6D26; /* GitLab's primary color */
+}
+
+/* CONTEXT SELECTOR CHIP STYLING */
+.context-selector-chip {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#platform-selector-btn {
+    background: #1A202C;
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+#platform-selector-btn:hover {
+    background: #2D3748;
+}
+
+.chevron {
+    margin-left: 10px;
+    font-size: 0.7em;
+    transition: transform 0.2s;
+}
+
+/* Dropdown Menu for the Selector */
+#platform-menu {
+    position: absolute;
+    top: 100%; /* Below the button */
+    left: 0;
+    z-index: 10;
+    margin-top: 5px;
+    background: var(--bg-dark);
+    border: 1px solid var(--accent-blue);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+    padding: 5px 0;
+    min-width: 250px;
+}
+
+#platform-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#platform-menu button:hover {
+    background: var(--hover-glow);
+    color: var(--accent-blue);
+}
+
+/* Icon styles (used inside buttons) */
+.gh-icon { color: var(--text-light); }
+.gr-icon { color: #FF69B4; }
+.gl-icon { color: var(--gitlab-red); } /* New GitLab icon color */
+
+/* GITBUTLER WORKSPACE STYLING */
+.gitbutler-widget {
+    background: #111827;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.vbranch {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #1A202C;
+    border-left: 3px solid var(--accent-blue);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
