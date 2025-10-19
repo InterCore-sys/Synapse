@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse: Project/Repo - Universal Code Gateway</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <header id="main-header">
+        <div class="logo">Synapse</div>
+        <nav>
+            <a href="#workspace" id="nav-workspace">Workspace</a> 
+            <a href="#code">Code</a>
+            <a href="#history">History</a>
+            <a href="#reviews" class="active-nav">Code Reviews</a>
+            <a href="#pipelines">Pipelines & CI</a> <a href="#issues">Collaboration</a>
+        </nav>
+        <div class="user-profile">Hello, DevUser</div>
+    </header>
+
+    <main id="repo-main-content">
+        <div class="repo-header-bar">
+            <h1 class="repo-title">Synapse/quantum-compiler</h1>
+            
+            <div class="context-selector-chip">
+                <button id="platform-selector-btn" aria-expanded="false">
+                    <span id="active-platform-display">GH (Pulls)</span>
+                    <span class="chevron">▼</span>
+                </button>
+                
+                <div id="platform-menu" class="hidden">
+                    <button data-platform="gh">🐙 GitHub (Pulls)</button>
+                    <button data-platform="gr">G Gerrit (Changes)</button>
+                    <button data-platform="gl">🦊 GitLab (Merge Requests)</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="unified-content-view">
+            <div id="review-views">
+                <h2 id="reviews-heading">Code Reviews <span class="platform-tag" id="current-tag">[GitHub: Pulls]</span></h2>
+
+                <div id="gh-view" class="active-view">
+                    <ul class="review-list">
+                        <li>#101: Implement Core AI Logic <span class="status open">OPEN</span></li>
+                    </ul>
+                </div>
+                
+                <div id="gr-view" class="inactive-view hidden">
+                    <ul class="review-list">
+                        <li>Change 12345: Update build script for CI <span class="status review">NEEDS REVIEW</span></li>
+                    </ul>
+                </div>
+
+                <div id="gl-view" class="inactive-view hidden">
+                    <ul class="review-list">
+                        <li>!42: Refactor API endpoint <span class="status draft">DRAFT</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="gitbutler-view" class="hidden">
+                <h2>Local Development Workspace</h2>
+                <div class="gitbutler-widget">
+                    <p>Visualizing 3 active Virtual Branches...</p>
+                    <div class="virtual-branch-list">
+                        <div class="vbranch">🧪 Feature/New-Algorithm <button class="push-btn">Push to GL as MR</button></div>
+                        <div class="vbranch">🐛 Fix/Memory-Leak</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pipelines-view" class="hidden">
+                <h2>CI/CD Pipelines</h2>
+                <ul class="pipeline-list">
+                    <li>Pipeline #1234 (Master) <span class="status success">Passed</span></li>
+                    <li>Pipeline #1235 (Feature/A) <span class="status failed">Failed</span></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <aside id="repo-sidebar">
+            <h3>Repository Health</h3>
+            <p>Last Activity: 1 hour ago</p>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
